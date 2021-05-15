@@ -1,0 +1,134 @@
+html, body{
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+body{
+	background-image: url('https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt126ee46ff174bc38/5e4c61519209d7312d445308/TFT_Teaser_Banner.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+button{
+	width: 100px; 
+ 	height: 200px; 
+ 	cursor: pointer;
+ 	border: none;
+}
+
+button:hover{
+ 	border: none;
+}
+
+button:focus, button:focus, button:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.img-fluid{
+	cursor: pointer;
+}
+
+.img-fluid:hover{
+    animation-name: brilhar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.btn-my:hover{
+    animation-name: brilhar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.c1{ background-color: #1E263B; }
+.c2{ background-color: #1E3233; }
+.c3{ background-color: #1E382F; }
+.c4{ background-color: #302B25; }
+.c5{ background-color: #2B3826; }
+.c6{ background-color: #1C3726; }
+.c7{ background-color: #302335; }
+.c8{ background-color: #222632;	}
+
+.container{
+	background-color: rgba(2, 17, 14, 0.9);
+	border-bottom-left-radius: 9px;
+	border-bottom-right-radius: 9px;
+	border-bottom: 4px solid #ccc;
+}
+
+.img-fluid{
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Teamfight_Tactics_logo.svg/1200px-Teamfight_Tactics_logo.svg.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	width: auto;
+	height: 100px;
+}
+
+@keyframes brilhar{
+    0%   {
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+    }
+    50%  {
+        filter: brightness(1.5);
+        -webkit-filter: brightness(1.5);
+    }
+    100% {
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+    }
+}
+
+@keyframes pulsar{
+    0%   { 
+        transform: scale(1); 
+    }
+    50%  { 
+        transform: scale(1.1); 
+    }
+    100% { 
+        transform: scale(1); 
+    }
+}
+
+@keyframes brilhar_e_pulsar{
+    0%   {
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+        transform: scale(1); 
+    }
+    50%  {
+        filter: brightness(1.5);
+        -webkit-filter: brightness(1.5);
+        transform: scale(1.1); 
+    }
+    100% {
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+        transform: scale(1); 
+    }
+}
+
+/* Class */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Usage as a mixin */
+.element {
+  .center-block();
+}
+
+@media screen and (max-width: 960px) {
+	.img-fluid{
+		background-image: url('https://lh3.googleusercontent.com/MVSf0OQvdh860H0xti9fWlYrMUO8LbvjmNsfxv-jeM-DQH1nMEjtMGuvb4l_CseBV4s=h300');
+		height: 75px;
+	}
+}
