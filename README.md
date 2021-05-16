@@ -2,6 +2,7 @@
 Scout simples para partidas de TFT. 
 
 Data de criação: Maio de 2021.
+
 Função: testar conhecimentos e manipulação de elementos html com javascript e css.
 
 Descrição detalhada:
