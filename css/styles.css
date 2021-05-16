@@ -4,28 +4,56 @@ html, body{
 }
 
 body{
-	background-image: url('https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt126ee46ff174bc38/5e4c61519209d7312d445308/TFT_Teaser_Banner.jpg');
+	background-image: url('../img/TFT_Teaser_Banner.jpg');
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: 100% 100%;
 	background-attachment: fixed;
 }
 
-button{
-	width: 100px; 
- 	height: 200px; 
- 	cursor: pointer;
+.bg-transparent{
+    border: 3px solid transparent;
+}
+
+.borderactive{
+    border: 3px solid #ccc;
+}
+
+.btn-go{
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100px; 
+    height: 200px; 
+    cursor: pointer;
+    border: none;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+/*
+.btn-go:hover{
  	border: none;
 }
 
-button:hover{
- 	border: none;
-}
-
-button:focus, button:focus, button:focus {
+.btn-go:focus, .btn-go:focus, .btn-go:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
+}
+*/
+
+.bg-danger{
+    background-image: url('../img/red.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.bg-success{
+    background-image: url('../img/green.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .img-fluid{
@@ -60,13 +88,60 @@ button:focus, button:focus, button:focus {
 	border-bottom: 4px solid #ccc;
 }
 
+.cont2{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
 .img-fluid{
-	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Teamfight_Tactics_logo.svg/1200px-Teamfight_Tactics_logo.svg.png');
+	background-image: url('../img/logo.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100% 100%;
 	width: auto;
 	height: 100px;
+}
+.icones{
+    margin-top: 5px;
+    margin-right: -10px;
+}
+.icon{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    float: right;
+    cursor: pointer;
+}
+
+.icon:hover{
+    animation-name: brilhar_e_pulsar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.editar{
+    background-image: url('../img/edit.png');
+    border: 2px solid rgba(62, 176, 88, 0.5);
+}
+
+.matar{
+    background-image: url('../img/skull.png');
+    border: 2px solid rgba(224, 74, 88, 0.5);
+    margin-right: 10px;
+}
+
+.text{
+    height: 100%;
+    text-align: center;
+    text-shadow: 0 0 6px black;
+}
+
+.bg-black{
+    background-color: black;
 }
 
 @keyframes brilhar{
@@ -114,21 +189,10 @@ button:focus, button:focus, button:focus {
     }
 }
 
-/* Class */
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Usage as a mixin */
-.element {
-  .center-block();
-}
-
 @media screen and (max-width: 960px) {
 	.img-fluid{
-		background-image: url('https://lh3.googleusercontent.com/MVSf0OQvdh860H0xti9fWlYrMUO8LbvjmNsfxv-jeM-DQH1nMEjtMGuvb4l_CseBV4s=h300');
-		height: 75px;
+		background-image: url('../img/unnamed.png');
+        background-size: 75% 100%;
+        height: 120px;
 	}
 }
