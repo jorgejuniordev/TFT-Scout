@@ -80,7 +80,7 @@ function cores(value){
 
 function inserirMatador(value){
 	value.forEach(function(item, indice, array){
-		document.getElementById(item).innerHTML = '<div class="icones"><div class="icon bg-black editar" onclick="rename('+"'"+item+"'"+')"></div><div class="icon bg-black matar" onclick="matar('+"'"+item+"'"+')"></div></div><b class="text d-flex flex-column justify-content-center align-items-center">'+item+'</b>';
+		document.getElementById(item).innerHTML = '<div class="icones position-absolute"><div class="icon bg-black matar" onclick="matar('+"'"+item+"'"+')"></div><div class="icon bg-black editar" onclick="rename('+"'"+item+"'"+')"></div></div><b class="text d-flex flex-column justify-content-center align-items-center">'+item+'</b>';
 	});
 }
 
@@ -95,7 +95,7 @@ function inserir(value, novo){
 	lista.splice(index, 1);
 	lista.splice(index, 0, novo);
 	var element = document.getElementById(value);
-	element.innerHTML = '<div class="icones"><div class="icon bg-black editar" onclick="rename('+"'"+novo+"'"+')"></div></div><b class="text d-flex flex-column justify-content-center align-items-center">'+novo+'</b>';
+	element.innerHTML = '<div class="icones position-absolute"><div class="icon bg-black editar" onclick="rename('+"'"+novo+"'"+')"></div></div><b class="text d-flex flex-column justify-content-center align-items-center">'+novo+'</b>';
 	element.setAttribute("onclick", "lutar('"+novo+"');"); 
 }
 
@@ -106,14 +106,22 @@ function rename(value){
 }
 
 function matar(value){
-	var element = document.getElementById(value);
-	element.innerHTML = '';
-	element.removeAttribute("onclick");
-	element.classList.remove("btn-go");
-	element.classList.add("bg-transparent");
-	element.style.cursor = "auto";
-	var index = lista.indexOf(value);
-	lista.splice(index, 1);
+	if(window.confirm("Tem certeza que desejar eliminar o usuário: "+value+".")){
+		var element = document.getElementById(value);
+		element.innerHTML = '';
+		element.removeAttribute("onclick");
+		element.classList.remove("btn-go");
+		element.classList.add("bg-transparent");
+		element.style.cursor = "auto";
+		var index = lista.indexOf(value);
+		lista.splice(index, 1);
+		
+		if(cliques > 3){
+			atualiza = lista.slice(0, 3);
+			cores(atualiza);
+			document.getElementById('possiveis').innerHTML = ' '+atualiza+'.';
+		}
+	}
 }
 
 function lock(value){

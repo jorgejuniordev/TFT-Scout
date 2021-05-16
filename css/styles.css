@@ -101,10 +101,12 @@ body{
 	width: auto;
 	height: 100px;
 }
+
 .icones{
-    margin-top: 5px;
-    margin-right: -10px;
+    bottom: 5px;
+    left: 5px;
 }
+
 .icon{
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -126,12 +128,12 @@ body{
 .editar{
     background-image: url('../img/edit.png');
     border: 2px solid rgba(62, 176, 88, 0.5);
+    margin-right: 5px;
 }
 
 .matar{
     background-image: url('../img/skull.png');
     border: 2px solid rgba(224, 74, 88, 0.5);
-    margin-right: 10px;
 }
 
 .text{
