@@ -16,7 +16,7 @@ function lutar(value){
 		if(Number.isInteger(value) && (paraInt.length == 1)){
 			nome(value);
 		}else{
-			if(lista.includes(1) || lista.includes(2) || lista.includes(3) || lista.includes(4) || lista.includes(5) || lista.includes(6) || lista.includes(7) || lista.includes(8)){
+			if(validarNumeroDeJogadores()){
 				alert('Você deve inserir o nome de todos usuários antes de iniciar o combate.');
 			}else{
 				processar(value);
@@ -36,6 +36,11 @@ function lutar(value){
 			}
 		}
 	}
+}
+
+function validarNumeroDeJogadores() {
+	const numeros = [1, 2, 3, 4, 5, 6, 7, 8];
+	return lista.some(item => numeros.includes(item));
 }
 
 function nome(value){
